@@ -18,6 +18,8 @@ $(function(){
                 stateSelect.append(option);
         }
 
+        // If the user has entered a value in the addr-1 field, 
+        // the user must also enter something into the zip field
         $('.signup-form').submit(function(){
     			var signupForm = $(this);
     			var addr1Input = signupForm.find('input[name="addr-1"]');
