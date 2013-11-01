@@ -5,7 +5,7 @@
 //document is ready for manipulation
 $(function(){
     //document is now ready for manipulation
-	var select = $('select[name="state"]');
+	var stateSelect = $('select[name="state"]');
     	var option;
         var idx;
         var state;
@@ -15,7 +15,7 @@ $(function(){
                 option = $(document.createElement('option'));
                 option.attr('value', state.abbreviation);
                 option.html(state.name);
-                select.append(option);
+                stateSelect.append(option);
         }
 
         $('.signup-form').submit(function(){
