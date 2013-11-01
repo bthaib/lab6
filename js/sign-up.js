@@ -10,7 +10,7 @@ $(function(){
         var idx;
         var state;
 
-        for(idx = 0; idx < usStates.length; ++idx) {
+        for (idx = 0; idx < usStates.length; ++idx) {
                 state = usStates[idx];
                 option = $(document.createElement('option'));
                 option.attr('value', state.abbreviation);
@@ -37,12 +37,12 @@ $(function(){
     				return false;
     			}
         });
-
-    $('.cancel-signup').click(function(){
+	$('.cancel-signup').click(function(){
     	//code to run when user clicks "No Thanks!" button
     	$('.cancel-signup-modal').modal();
 	}); //cancel-signup click
 	$('.btn-abandon').click(function(){
-    window.location = 'http://www.google.com';
-	});                   
+		window.location = 'http://www.google.com';
+	});
+
 }); //on document ready 
