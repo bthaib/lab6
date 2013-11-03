@@ -24,18 +24,16 @@ $(function(){
     			var signupForm = $(this);
     			var addr1Input = signupForm.find('input[name="addr-1"]');
     			var addr1Value = addr1Input.val();
-    			if (addr1Value.length > 0) {
+    			if (addr1Value && addr1Value.trim().length > 0) {
     				var zipInput = signupForm.find('input[name="zip"]');
     				var zipValue = zipInput.val();
-    				if (zipValue.length === 0) {
+    				if (zipValue && zipValue.trim().length > 0) {
+    					return true;
+    				} else {
     					alert("Zip code must be provided if an address is provided");
     					return false;
-    				} else {
-    					return true;
     				} 
-    			} else {
-    				return false;
-    			}
+    			}	
         });
 	$('.cancel-signup').click(function(){
     	//code to run when user clicks "No Thanks!" button
